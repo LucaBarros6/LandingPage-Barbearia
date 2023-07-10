@@ -1,0 +1,318 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+@keyframes textAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+body{
+    margin: 0;
+}
+
+header h1{
+    font-size: 4rem;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+li a{
+    margin: 0 40px;
+    color: white;
+    font-size: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 30px;
+}
+
+nav img{
+    border-radius: 70px;
+}
+
+header{
+    height: calc(100vh - 150px);
+    background-size: 100%;
+    background:no-repeat center/cover url("assets/barberback.jpg");
+    color: white;
+}
+
+.header-center{
+    opacity: 0;
+    animation: textAnimation 7s forwards;
+    animation-delay: calc(0.1s * var(--index));
+}
+
+.header-center{
+    max-width: 400px;
+    margin: 90px auto;
+    text-align: center;
+    color: black;
+    background-color: azure;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.header-center h1{
+    margin-bottom: 10px;
+}
+
+.sanduba{
+    display: none;
+    cursor: pointer;
+}
+
+.debaixodosanduba{
+    list-style-type: none;
+    background-color: #313131;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    border-radius: 30px;
+    display: none;
+    margin: auto;
+}
+
+.debaixodosanduba img{
+    width: 70px;
+    height: 70px;
+    margin-left: 167px;
+    border-radius: 30px;
+}
+
+.debaixodosanduba li{
+    margin: 10px 0px;
+    text-align: center;
+}
+
+/* Sobre Nos */
+.container-about{
+    display: flex;
+}
+
+.desc h2{
+    margin: 10 15px;
+    text-align: center;
+    font-family: 'Pangolin', cursive;;
+    color: aliceblue;
+}
+
+.desc p{
+    text-align: justify;
+    margin: 10px 10px;
+}
+
+.desc{
+    width: 50%;
+    background-color: #313131;
+    color: white;
+    border-top-right-radius: 30px;
+}
+
+.img-about{
+    margin: auto;
+}
+
+.img-about img{
+    border-radius: 900px;
+}
+
+/* Servicos */
+
+.servicostext{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin: 10px;
+}
+
+.textserve{
+    display: block;
+    border: solid grey;
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+    width: 20%;
+}
+
+.textserve p{
+    color: black;
+    margin: 10px;
+}
+
+.textserve h2{
+    color: black;
+    margin: 10px;
+}
+
+.servicosimg{
+    background-image: url("/barber-services.jpg");
+    color: black;
+}
+
+.img-service{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    font-size: 120px;
+}
+
+.img-service h1{
+    border-radius: 80px;
+    padding: 50px;
+    color: white;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    padding: 10px;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-name{
+    width: 20%;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px;
+}
+
+.icon-name a{
+    color: grey;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.icon-name h4{
+    margin: 4px;
+}
+
+.icon-name i{
+    margin: 4px;
+}
+
+.copy{
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .header-center{
+        margin: 30px;
+        align-items: center;
+        max-width: 85%;
+        font-size: 15px;
+    }
+    
+    nav img{
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+    }
+
+    .img-service{
+        width: 100%;
+        margin: auto;
+    }
+
+    header{
+        width: 100%;
+        margin: auto;
+    }
+
+    .header-center h1{
+        font-size: 55px;
+    }
+
+    ul{
+        display: none;
+    }
+
+    .sanduba{
+        display: block;
+        margin: auto;
+        margin-top: 70px;
+    }
+
+    .container-about {
+        flex-wrap: wrap;
+    }
+
+    .desc{
+        width: 100%;
+        margin: auto;
+        border-radius: 0px;
+        padding: 0;
+    }
+
+    .container-footer{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .desc h2{
+        font-size: 35px;
+        font-family: 'Pangolin', cursive;
+        color: aliceblue;
+    }
+
+    .img-about{
+        opacity: 0;
+        animation: textAnimation 7s forwards;
+        animation-delay: calc(0.1s * var(--index));
+        margin-top: 10px;
+    }
+
+    .textserve{
+        width: 80%;
+        background-color: rgb(182, 178, 178);
+    }
+
+    .img-service{
+        display: flex;
+        justify-content: center;
+        height: 300px;
+        font-size: 31px;
+    }
+    
+    .img-service h1{
+        padding: 50px;
+        text-align: center;
+    }
+
+    .icon-name a{
+        display: flex;
+        width: 300px;
+    }
+
+    .fale{
+        width: 300px;
+    }
+
+    .icon-name h4{
+        margin-bottom: 15px;
+    }
+}
